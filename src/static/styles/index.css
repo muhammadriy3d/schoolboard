@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*, html {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*, html, body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+    color: #537fbe;
+}
+
+nav .navbar-brand .red {
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow {
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green {
+    color: #2e944b;
+}
+
+.navbar {
+    box-shadow: rgba(0, 180, 120, 0.43) 0 0 12px 0;
+    max-height: 3.5em;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgba(57, 57, 57, 0.6);
+    box-shadow: rgba(0, 180, 120, 0.43) 0 0 12px 0;
+}
+
+.register-container {
+    height: 90vh;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 999px) {
+    .navbar {
+        max-height: 14em;
+        padding: auto 0;
+    }
+
+    .collapse-btn {
+        width: 100%;
+        background-color: #ea443b;
+        color: white;
+    }
+
+    .register-form {
+        border: none;
+        box-shadow: none;
+    }
+}
+

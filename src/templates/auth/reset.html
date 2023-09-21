@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+{% block title %}
+    Reset Password | Schoolboard
+{% endblock %}
+
+{% block main %}
+
+<div class="d-flex flex-col justify-content-center mx-0 register-container">
+    
+    <form class="register-form p-8 rounded-xl needs-validation" novalidate>
+        <h3 class="text-4xl">Reset Password</h3>
+        <p class="my-2 text-gray-300 text-lg">Enter your email to reset your password!<p>
+
+        <div class="form-group">
+
+            <div class="has-validation">
+                <label for="username" class="form-label"></label>
+                <input type="text" class="form-control text-lg form-control-lg" id="username" placeholder="Username"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please enter a vaild username!.
+                </div>
+            </div>
+
+            <div class="has-validation">
+                <label for="email" class="form-label"></label>
+                <input type="text" class="form-control text-lg form-control-lg" id="email" placeholder="Email Adress"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please enter a vaild address!.
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <button type="submit" class="btn btn-primary btn-lg mb-2 mt-8 w-100 mx-0 p-2">Reset My Password</button>
+                <button type="button" onclick="myNavigation('/login')"
+                    class="btn btn-dark btn-lg w-100 p-2">&langle;&nbsp;&nbsp;Back to login</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+{% endblock%}
