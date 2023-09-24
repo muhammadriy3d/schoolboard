@@ -11,7 +11,7 @@
 
 <div class="d-flex flex-col justify-content-center mx-0 register-container">
     
-    <form class="register-form p-8 rounded-xl needs-validation" novalidate>
+    <form method="post" class="register-form p-8 rounded-xl needs-validation" novalidate>
         <h3 class="text-4xl">Reset Password</h3>
         <p class="my-2 text-gray-300 text-lg">Enter your email to reset your password!<p>
 
@@ -19,7 +19,7 @@
 
             <div class="has-validation">
                 <label for="username" class="form-label"></label>
-                <input type="text" class="form-control text-lg form-control-lg" id="username" placeholder="Username"
+                <input type="text" class="form-control text-lg form-control-lg" name="username" id="username" placeholder="Username"
                     aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
                     Please enter a vaild username!.
@@ -28,10 +28,19 @@
 
             <div class="has-validation">
                 <label for="email" class="form-label"></label>
-                <input type="text" class="form-control text-lg form-control-lg" id="email" placeholder="Email Adress"
+                <input type="text" class="form-control text-lg form-control-lg" name="email" id="email" placeholder="Email Adress"
                     aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
                     Please enter a vaild address!.
+                </div>
+            </div>
+
+            <div class="has-validation">
+                <label for="passowrd" class="form-label"></label>
+                <input type="password" class="form-control text-lg form-control-lg" name="password" id="passowrd" placeholder="New passowrd"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please enter a vaild password!.
                 </div>
             </div>
 
@@ -45,5 +54,7 @@
     </form>
 
 </div>
+
+<script src="{{ url_for('static', filename='js/Register.js') }}"></script>
 
 {% endblock%}

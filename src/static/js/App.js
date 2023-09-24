@@ -1,26 +1,46 @@
-(() => {
-  "use strict";
+function useState(initialValue) {
+  let state = initialValue; // Initialize the state with the provided initial value
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
+  // Define a setter function to update the state
+  function setState(newValue) {
+    state = newValue;
+  }
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+  // Return an array containing the current state and the setter function
+  return [state, setState];
+}
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
+const [data, setData] = useState('');
 
 function myNavigation(page) {
   window.location.href = page;
 }
+
+const deleteStudent = (studentId) => {
+  fetch("/users/" + studentId, {
+    method: "DELETE",
+  }).then((_res) => {
+    window.location.href = "/users";
+  });
+};
+
+async function fetchData() {
+  try {
+    const response = await fetch("/current-user");
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    username = document.getElementById("username");
+    username.textContent = data.username;
+
+    console.log(data);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+
+fetchData();
+
+
+  

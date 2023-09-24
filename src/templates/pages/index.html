@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home | Schoolboard
+{% endblock %}
+{% block main %}
+    <div class="d-flex flex-col justify-content-center mx-0 register-container ">
+        <form method="post" class="register-form p-8 rounded-xl needs-validation"
+            novalidate>
+            <h3 class="text-4xl">Student register</h3>
+            <p class="my-2 text-gray-300 text-lg"></p>
+    
+            <div class="form-group">
+                <label for="username" class="form-label"></label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text text-lg" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control text-lg" id="username" name="username" placeholder="Username"
+                        aria-describedby="inputGroupPrepend" required minlength="3" maxlength="12" />
+                    <div id="validUsernameFeedback" class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div id="invalidUsernameFeedback" class="invalid-feedback">
+                        Please enter a valid username (e.g., name, forename.surname, name.13).
+                    </div>
+                </div>
+    
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control text-lg" id="email" name="email" placeholder="Email Address"
+                    aria-describedby="inputGroupPrepend" required />
+                <div id="validEmailFeedback" class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="invalidEmailFeedback" class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+
+                <label for="city" class="form-label"></label>
+                <input type="city" class="form-control text-lg" id="city" name="city" placeholder="City"
+                    aria-describedby="inputGroupPrepend" required />
+                <div id="validFeedback" class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="invalidFeedback" class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+    
+    
+    
+            <div class="row g-2">
+                <button type="submit" class="btn btn-success btn-lg mb-2 mt-4 w-100 p-2">Add new student</button>
+            </div>
+        </form>
+    </div>
+    <!-- <script src="{{ url_for('static', filename='js/Register.js') }}"></script> -->
+
+{% endblock %}
