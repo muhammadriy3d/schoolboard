@@ -6,6 +6,7 @@ school managment system full stack using flask
 ## How to use?
 
 1. install flask, cs50, flask_session in your python environment
+2. generate secret key and add it in .env under SECRET_KEY="<KEY>"
 2. run 
   ```bash
   flask run
