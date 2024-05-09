@@ -1,12 +1,16 @@
 # schoolboard dashboard
 
-#### Video Demo:  https://youtube.com
+my first full stack app built on phone
+school managment system full stack using flask
 
-#### Description
+## How to use?
 
-I just think what if I could make a digital database system for my old high school
-and from there I get the idea I just made simple functionality nothing very fancy
+1. install flask, cs50, flask_session in your python environment
+2. run 
+  ```bash
+  flask run
+  ```
 
 ## Copyrights
 
-© 2023 Muhammad Riad, Truprox, Inc
+© 2022 Muhammad Riad, Truprox, Inc

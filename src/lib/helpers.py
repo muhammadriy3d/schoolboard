@@ -30,7 +30,7 @@ def apology(message, code=400):
 
 
 def login_required(f):
-    @wraps(f)
+    @wraps(wrapped=f)
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect(url_for("auth.login"))
